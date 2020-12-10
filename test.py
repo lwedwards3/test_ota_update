@@ -6,7 +6,7 @@ class Test:
     def __init__(self):
         self.LED = Pin(2, Pin.OUT)
         self.LED.value(1)
-        self.sleep_time_ms = 500
+        self.sleep_time_ms = 1500
         self.start_time = utime.ticks_ms()
         
         
