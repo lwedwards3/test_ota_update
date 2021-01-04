@@ -8,7 +8,11 @@ class Test:
         self.LED.value(1)
         self.sleep_time_ms = 1500
         self.start_time = utime.ticks_ms()
-        
+        while True:
+            if utime.ticks_ms() >= self.start_time + self.sleep_time_ms:
+                self.LED.value(not self.LED.value())
+                self.start_time = utime.ticks_ms()
+                
         
     def check_time(self):
         if utime.ticks_ms() < self.start_time:
@@ -20,8 +24,6 @@ class Test:
     def blink(self):
         self.LED.value(not self.LED.value())
         self.start_time = utime.ticks_ms()
-    
-    
     
 
     def run(self):
