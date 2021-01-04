@@ -6,7 +6,7 @@ class Test:
     def __init__(self):
         self.LED = Pin(2, Pin.OUT)
         self.LED.value(1)
-        self.sleep_time_ms = 1500
+        self.sleep_time_ms = 2000
         self.start_time = utime.ticks_ms()
         while True:
             if utime.ticks_ms() >= self.start_time + self.sleep_time_ms:
